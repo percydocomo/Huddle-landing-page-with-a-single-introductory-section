@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+/* ROOT */
+
+:root {
+    --primary-violet: hsl(257, 40%, 49%);
+    --primary-soft-magenta: hsl(300, 69%, 71%);
+
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-open-sans: "Open Sans", sans-serif;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERIC STYLES */
+
+.container {
+    width: 23.5rem;
+    margin: 1rem auto;
+    padding: 2rem 2.3rem;
+    background-color: var(--primary-violet);
+    background-image: url(./images/bg-mobile.svg);
+}
+
+/* LOGO AND HERO IMAGE DIV */
+
+img {
+    width: 100%;
+}
+
+#huddle-logo {
+    max-width: 40%;
+    margin-bottom: 3.6rem;
+}
+
+#illustration {
+    width: 101%;
+}
+
+/* HUDDLE INFO DIV */
+
+.huddle-info {
+    margin-top: 3.45rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--ff-poppins);
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-family: var(--ff-open-sans);
+    color: white;
+    margin-top: 0.93rem;
+    text-align: center;
+    line-height: 1.47rem;
+}
+
+.register-button {
+    width: 12.5rem;
+    margin-top: 1.45rem;
+    padding: 0.67rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: white;
+    font-family: var(--ff-poppins);
+    font-size: 0.77rem;
+    color: var(--primary-violet);
+    transition: all 0.4s ease-in-out;
+}
+
+.icon-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    gap: 0.9rem;
+    position: relative;
+}
+
+.icon {
+    border: 0.1rem solid white;
+    border-radius: 50%;
+    width: 2.0rem;
+    height: 2.0rem;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+.fa-brands {
+    /* a method to center an element vertically and horizontally */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+}
+
+/* BUTTON AND ICONS ON HOVER */
+
+.register-button:hover, .icon:hover {
+    background-color: var(--primary-soft-magenta);
+}
+
+/* FOOTER */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1400px) {
+    .container {
+        width: 90rem;
+        height: 50.2rem;
+        background-image: url(./images/bg-desktop.svg);
+        display: grid;
+        grid-template-columns: 56.7% 43.3%;
+    }
+
+    /* LOGO AND HERO IMAGE DIV */
+
+    .logo-and-hero-image {
+        margin: 1.3rem 2.2rem;
+    }
+
+    #huddle-logo {
+        width: 13.125rem;
+        margin-bottom: 5.2rem;
+    }
+
+    /* HUDDLE INFO DIV */
+
+    .huddle-info {
+        margin: 1.4rem;
+        padding-top: 11.35rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: left;
+        padding-right: 1.5rem;
+        padding-bottom: 0.15rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        text-align: left;
+        line-height: 1.7rem;
+        padding-right: 1.9rem;
+    }
+
+    .register-button {
+        margin-top: 1.45rem;
+        padding: 0.95rem 2rem;
+        font-size: 1.08rem;
+        align-self: flex-start;
+    }
+
+    /* ICON-WRAPPER DIV */
+
+    .icon-wrapper {
+        margin-top: 11.5rem;
+        align-self: flex-end;
+    }
+
+    .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .fa-facebook-f {
+        font-size: 1.3rem; 
+    }
+
+    .fa-instagram {
+        font-size: 1.3rem;
+    } 
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px){ 
+   .container {
+      width: 60%;
+   }   
+}
+
+@media screen and (max-width: 374px) {
+    .container {
+        width: 90%;
+    }
+}
